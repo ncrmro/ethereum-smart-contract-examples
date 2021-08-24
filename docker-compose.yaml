@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  geth:
+    image: ethereum/client-go:v1.10.7
+    command: >
+      --datadir /root/.ethereum/ --dev
+#      --mine --miner.threads 1
+#      --miner.etherbase 0x70b0964cb81562c99ad8737c949fa01c4dd9fdb6
+    volumes:
+      - .ethereum:/root/.ethereum
+
+
